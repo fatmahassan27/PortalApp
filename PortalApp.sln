@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portal.PL", "Portal.PL\Portal.PL.csproj", "{956D52A1-6E4B-4E05-8967-E1238D177842}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portal.BL", "Portal.BL\Portal.BL.csproj", "{46161311-9272-4F6C-A996-ECEDFCCFFD44}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portal.DAL", "Portal.DAL\Portal.DAL.csproj", "{7A9D487E-90F1-4246-97B7-5150E8EE83D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{956D52A1-6E4B-4E05-8967-E1238D177842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{956D52A1-6E4B-4E05-8967-E1238D177842}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{956D52A1-6E4B-4E05-8967-E1238D177842}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{956D52A1-6E4B-4E05-8967-E1238D177842}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46161311-9272-4F6C-A996-ECEDFCCFFD44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46161311-9272-4F6C-A996-ECEDFCCFFD44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46161311-9272-4F6C-A996-ECEDFCCFFD44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46161311-9272-4F6C-A996-ECEDFCCFFD44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A9D487E-90F1-4246-97B7-5150E8EE83D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A9D487E-90F1-4246-97B7-5150E8EE83D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A9D487E-90F1-4246-97B7-5150E8EE83D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A9D487E-90F1-4246-97B7-5150E8EE83D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0AF755F-ED53-415D-A100-1FD124F68D28}
+	EndGlobalSection
+EndGlobal

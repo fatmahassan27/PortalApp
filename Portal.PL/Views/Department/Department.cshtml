@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Department";
+
+
+}
+
+<h2> Welcome to Department</h2>
+<center>
+    <ul>
+
+    @foreach (var item in ViewBag.data)
+    {
+            <li>
+                @item
+            </li>
+    }
+    </ul>
+
+</center>
+
