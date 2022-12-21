@@ -1,0 +1,44 @@
+﻿@model IEnumerable<EmployeeVM>
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    tr, th, tbody, thead {
+        text-align: center !important;
+    }
+</style>
+<a asp-controller="Employee" asp-action="Creat" class="btn btn-primary">Creat new Employee</a>
+<h2> Welcome to Employee</h2>
+<table class="table table-hover table-striped text-center table-bordered font-bold">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th> Hire Date</th>
+            <th>Department Name</th>
+            <th>Details</th>
+            <th>UpDate</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Salary</td>
+                <td>@item.HireDate.ToLongDateString()</td>
+                <td>@item.Department.Name</td>
+
+
+                <td><a asp-controller="Employee" asp-action="Details" asp-route-id="@item.Id" class="btn btn-success">Details</a></td>
+                <td><a asp-controller="Employee" asp-action="UpDate" asp-route-id="@item.Id" class="btn btn-warning">UpDate</a></td>
+                <td><a asp-controller="Employee" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a></td>
+
+            </tr>
+
+        }
+    </tbody>
+</table>

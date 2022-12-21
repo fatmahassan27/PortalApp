@@ -1,0 +1,30 @@
+﻿@model DepartmentVM
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/layOut/_Layout.cshtml";
+}
+
+<div class="block-header">
+    <h2>Delete item</h2>
+
+</div>
+<form class="form-group" asp-controller="Department" asp-action="Delete">
+    <input type="hidden" asp-for="ID" />
+
+    <label asp-for="Name">Department Name</label>
+    <input type="text" class="form-control" asp-for="Name" readonly />
+    <br />
+
+    <label asp-for="Code">Department Code</label>
+    <input type="number" class="form-control" asp-for="Code" readonly />
+    <br />
+
+    <center>
+        <input type="submit" value="Delete" class=" btn btn-danger" />
+ 
+        <a asp-controller="Department" asp-action="Department" class="btn btn-primary">Return</a>
+       
+    </center>
+
+</form>
+

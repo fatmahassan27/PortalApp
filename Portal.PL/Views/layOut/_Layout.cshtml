@@ -15,6 +15,8 @@
 
     <!-- Bootstrap Core Css -->
     <link href="~/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="~/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet">
+
     @RenderSection("aaa",required:false)
     <!-- Waves Effect Css -->
     <link href="~/plugins/node-waves/waves.css" rel="stylesheet" />
@@ -318,6 +320,17 @@
                             </li>     
                         </ul>
                       </li>   
+                           <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">swap_calls</i>
+                            <span>Employee</span>
+                         </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a asp-controller="Employee" asp-action="Employee">Employee Card</a>
+                            </li>     
+                        </ul>
+                      </li>  
                       
 
                    
@@ -489,7 +502,7 @@
     
     <!-- Jquery Core Js -->
     <script src="~/plugins/jquery/jquery.min.js"></script>
-
+ @RenderSection("JqueryValidation", required:false)
     <!-- Bootstrap Core Js -->
     <script src="~/plugins/bootstrap/js/bootstrap.js"></script>
 

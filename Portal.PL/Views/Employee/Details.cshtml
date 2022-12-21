@@ -1,0 +1,20 @@
+﻿@model EmployeeVM
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="block-header">
+    <h2>Details For @Model.Name </h2>
+</div>
+@{
+    await Html.RenderPartialAsync("~/Views/Partials/Empolyee/DeleteDetails.cshtml");
+}
+<center>
+    <a asp-controller="Employee" asp-action="Index" class="btn btn-primary">Return</a>
+    <a asp-controller="Employee" asp-action="UpDate" asp-route-id="@Model.Id" class="btn btn-primary">Update</a>
+    <a asp-controller="Employee" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-warning">Delete</a>
+</center>
+
+
+
+

@@ -1,0 +1,36 @@
+﻿@model EmployeeVM 
+
+
+<label asp-for="Name">Employee Name</label>
+ <input type="text" class="form-control" asp-for="Name" />
+ <span asp-validation-for="Name" class="text-danger"></span>
+ <br />
+
+ <label asp-for="Salary">Employee Salary</label>
+ <input type="number" class="form-control" asp-for="Salary" />
+ <span asp-Validation-for="Salary" class="text-danger"></span>
+ <br />
+<label asp-for="Email">Employee Email</label>
+<input type="email" class="form-control" asp-for="Email" />
+<span asp-Validation-for="Email" class="text-danger"></span>
+<br />
+<label asp-for="Address">Employee Address</label>
+<input type="text" class="form-control" asp-for="Address" />
+<span asp-Validation-for="Address" class="text-danger"></span>
+<br />
+<label asp-for="HireDate">Employee HireDate</label>
+<input type="date" class="form-control" asp-for="HireDate" />
+<span asp-Validation-for="HireDate" class="text-danger"></span>
+<br />
+<label asp-for="Notes"> Notes </label>
+<textarea rows="4" class="form-control" asp-for="Notes"></textarea>
+<span asp-Validation-for="Notes" class="text-danger"></span>
+
+<select class="form-control" asp-for="DepartmentID" asp-items="(SelectList)ViewBag.DepartmentList">
+    <option> Choose Department  </option>
+</select>
+<div class="demo-checkbox">
+    <input type="checkbox" asp-for="IsActive" checked="checked" />
+    <label asp-for="IsActive">IsActive </label>
+    <span asp-validation-for="IsActive" class="text-danger"></span>
+</div>

@@ -1,0 +1,28 @@
+﻿@model DepartmentVM
+@{
+    ViewData["Title"] = "UpDate";
+}
+
+<div class="block-header">
+    <h2>UpDate Department</h2>
+
+</div>
+<form class="form-group" asp-controller="Department" asp-action="UpDate" >
+    <div asp-validation-summary="All" class="text-danger"> </div>
+    <input type="hidden" asp-for="ID" />
+    <label asp-for="Name">Department Name</label>
+    <input type="text"  class="form-control" asp-for="Name"/>
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <br />
+
+   <label asp-for="Code">Department Code</label>
+   <input type="number" class="form-control" asp-for="Code" />
+   <span asp-Validation-for="Code" class="text-danger"></span>
+   <br />
+<center>
+    <input type="submit" value="UpDate" class=" btn btn-primary" />
+    <input type="reset" value="cancel" class="btn btn-danger" />
+</center>
+
+</form>
+

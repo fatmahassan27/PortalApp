@@ -8,13 +8,15 @@ using System.Threading.Tasks;
 
 namespace Portal.DAL.DataBase
 {
-    internal class ApplicationDBContext : DbContext
+    public class ApplicationDBContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\ProjectsV13;Initial Catalog=Portal;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Portal;Integrated Security=True");
         }
         public DbSet<Department> Department { get; set; }
+        public DbSet<Employee> Employee { get; set; }
+
 
     }
 }

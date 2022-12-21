@@ -1,21 +1,41 @@
-﻿
+﻿@model IEnumerable<DepartmentVM>
 @{
     ViewData["Title"] = "Department";
 
 
 }
-
-<h2> Welcome to Department</h2>
-<center>
-    <ul>
-
-    @foreach (var item in ViewBag.data)
-    {
-            <li>
-                @item
-            </li>
+<style>
+    tr, th, tbody, thead {
+        text-align: center !important;
     }
-    </ul>
+</style>
+<a asp-controller="Department" asp-action="Creat"  class="btn btn-primary">Creat new Department</a>
+<h2> Welcome to Department</h2>
+<table class="table table-hover table-striped text-center table-bordered font-bold">
+    <thead>
+        <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Details</th>
+        <th>UpDate</th>
+        <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {<tr>
+            <td>@item.ID</td>
+            <td>@item.Name</td>
+            <td>@item.Code</td>
+                <td><a asp-controller="Department" asp-action="Details"  asp-route-id="@item.ID" class="btn btn-success">Details</a></td>
+                <td><a asp-controller="Department" asp-action="UpDate" asp-route-id="@item.ID" class="btn btn-warning">UpDate</a></td>
+                <td><a asp-controller="Department" asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger">Delete</a></td>
 
-</center>
+        </tr>
+            
+        }
+    </tbody>
+</table>
+
 

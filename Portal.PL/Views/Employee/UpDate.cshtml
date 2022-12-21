@@ -1,0 +1,23 @@
+﻿@model EmployeeVM
+@{
+    ViewData["Title"] = "UpDate";
+}
+
+<div class="block-header">
+    <h2>Update Employee</h2>
+
+</div>
+<form class="form-group" asp-controller="Department" asp-action="UpDate" >
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="UpdateDate" />
+    @{
+        await Html.RenderPartialAsync("~/Views/Partials/Employee/CreatEdit.cshtml");
+    }
+
+<center>
+    <input type="submit" value="UpDate" class=" btn btn-primary" />
+    <input type="reset" value="cancel" class="btn btn-danger" />
+</center>
+
+</form>
+
